@@ -1,0 +1,43 @@
+@use '../common' as common;
+@use '../variables' as vars;
+
+.navbar {
+  width: 100vw;
+  height: 70px;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: vars.$background-color-darkblue;
+  img {
+    height: 100%;
+    width: 200px;
+    object-fit: fill;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  .navbar-items {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 10px;
+    a {
+      @include common.link;
+      &.selected {
+        color: vars.$color-orange;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    height: 90px;
+  }
+  .navbar-items {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}

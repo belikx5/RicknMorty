@@ -1,0 +1,22 @@
+@use '../variables' as vars;
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    min-width: 50vw;
+    text-align: center;
+    thead {
+        background-color: vars.$background-color-darkblue;
+        color: vars.$background-color-light;
+    }
+    tbody {
+        tr {
+            td {
+                padding: 10px;
+            }
+        }
+        tr:nth-child(2n) {
+            background-color: vars.$background-color-light;
+        }
+    }
+}

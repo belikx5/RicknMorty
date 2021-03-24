@@ -1,0 +1,9 @@
+@use './variables' as variables;
+
+@mixin link {
+    font-size: variables.$main-font-size;
+    line-height: variables.$main-line-height;
+    color: #fff;
+    text-decoration: none;
+    -webkit-user-select: none;
+}

@@ -1,0 +1,72 @@
+@use '../variables' as vars;
+
+.filter-container {
+  position: fixed;
+  top: 10%;
+  right: 5vw;
+  width: 155px;
+  h4 {
+    margin: 0;
+  }
+  input {
+    border-color: vars.$background-color-darkblue;
+    border-radius: 5px;
+  }
+  select {
+    height: 25px;
+    width: min-content;
+    border-color: vars.$background-color-darkblue;
+    border-radius: 5px;
+  }
+  .filter-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    border-bottom: 2px solid vars.$background-color-darkblue;
+    h3 {
+      margin-bottom: 0;
+    }
+    .filter-header-reset {
+      color: black;
+      position: absolute;
+      right: -10px;
+      top: 6px;
+    }
+  }
+
+  .filter-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h4 {
+      margin: 15px 0;
+    }
+    
+  }
+}
+
+@media (max-width: 1150px) {
+  .filter-container {
+    position: static;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 80%;
+    .filter-header{
+      align-items: center;
+      h3 {
+        margin-bottom: 15px;
+      }
+      .filter-header-reset {
+        left: -35px;
+      }
+    }
+    .filter-item {
+      margin-left: 10px;
+    }
+    
+  }
+}

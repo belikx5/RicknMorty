@@ -1,0 +1,36 @@
+@use '../variables' as vars;
+.deatils-container {
+    display: flex;
+    width: 550px;
+    min-height: 300px;
+    height: auto;
+    margin-top: 2px;
+    .details-image {
+        width: 50%;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .details-data {
+        width: 50%;
+        padding-left: 10px;
+        overflow-wrap: break-word;
+        p {
+            font-weight: 600;
+        }
+        span {
+            font-weight: 700;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .deatils-container{
+        width: 100%;
+        .details-image {
+            display: none;
+        }
+        .details-data {
+            width: 100%;
+        }
+    } 
+}

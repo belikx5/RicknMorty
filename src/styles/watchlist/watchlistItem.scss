@@ -1,0 +1,14 @@
+.watchlist-item {
+    width: 100%;
+    margin: 10px auto;
+    .watchlist-item-data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 15px;
+        flex-wrap: wrap;
+        .watchlist-item-name {
+            word-break: break-all;
+        }
+    }
+}
